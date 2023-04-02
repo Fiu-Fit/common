@@ -1,2 +1,2 @@
 # common
-Inter-Repo Common module.
+Inter-Repo Common module
