@@ -5,8 +5,14 @@ package auth;
 service AuthService {
   rpc Register (RegisterRequest) returns (Token);
   rpc Login (LoginRequest) returns (Token);
+  rpc Validate (Token) returns (ValidResponse);
 }
 
+message ValidResponse {
+  int32 status = 1;
+  repeated string errors = 2;
+  int32 userId = 3;
+}
 
 message Token {
   string token = 1;
