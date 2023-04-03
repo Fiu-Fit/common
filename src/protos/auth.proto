@@ -16,7 +16,8 @@ message RegisterRequest {
   string firstName = 1;
   string lastName = 2;
   string email = 3;
-  Role role = 4;
+  string password = 4;
+  Role role = 5;
 }
 
 message LoginRequest {
