@@ -5,7 +5,7 @@ package user;
 service UserService {
   rpc FindById (UserId) returns (User) {}
   rpc FindAll (Empty) returns (UserPages) {}
-  rpc Put(User) returns (User) {}
+  rpc Put (User) returns (User) {}
   rpc DeleteById (UserId) returns (User) {}
 }
 
