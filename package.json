@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
-    "rimraf": "npx rimraf",
+    "rimraf": "npx rimraf -G",
     "prepublish": "npm run build",
     "build": "yarn run clean && yarn run tsc",
     "clean": "yarn run rimraf ./dist",
