@@ -11,6 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoggerFactory = void 0;
 const winston = require("winston");
 const { splat, combine, timestamp, label, printf, errors } = winston.format;
 const loggerInstances = new Map();
@@ -49,4 +50,4 @@ const LoggerFactory = (tag) => {
     loggerInstances.set(tag, logger);
     return logger;
 };
-exports.default = LoggerFactory;
+exports.LoggerFactory = LoggerFactory;
