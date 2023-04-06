@@ -29,7 +29,7 @@ const getLogLevel = (tag: string): string => {
   return logLevel.toLowerCase();
 };
 
-const LoggerFactory = (tag: string) => {
+export const LoggerFactory = (tag: string) => {
   let logger = loggerInstances.get(tag);
   if (logger != null) {
     return logger;
@@ -48,4 +48,3 @@ const LoggerFactory = (tag: string) => {
   loggerInstances.set(tag, logger);
   return logger;
 };
-export default LoggerFactory;
