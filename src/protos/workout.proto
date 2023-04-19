@@ -3,7 +3,7 @@ syntax = "proto3";
 package workout;
 
 service UserService {
-  rpc createWorkout (WorkoutDto) returns Workout
+  rpc createWorkout (WorkoutDto) returns (Workout) {}
   rpc getWorkoutById (WorkoutId) returns (Workout) {}
   rpc getWorkouts (Empty) returns (Workout[]) {}
   rpc updateWorkout (WorkoutId, WorkoutDto) returns (Workout) {}
@@ -19,8 +19,8 @@ message Workout {
   string name = 2;
   int32 duration = 3;
   string category = 4;
-  int32[] athleteIds = 5;
-  int32[] authorId = 6;
+  repeated int32 athleteIds = 5;
+  int32 authorId = 6;
 }
 
 message WorkoutDto {
