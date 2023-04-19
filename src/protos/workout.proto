@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package workout;
 
-service UserService {
-  rpc createWorkout (WorkoutDto) returns (Workout) {}
-  rpc getWorkoutById (WorkoutId) returns (Workout) {}
-  rpc getWorkouts (Empty) returns (Workout[]) {}
-  rpc updateWorkout (WorkoutId, WorkoutDto) returns (Workout) {}
+service WorkoutService {
+  rpc Create (Workout) returns (Workout) {}
+  rpc FindById (WorkoutId) returns (Workout) {}
+  rpc FindAll (Empty) returns (Workout[]) {}
+  rpc Put (WorkoutId, Workout) returns (Workout) {}
   rpc DeleteById (WorkoutId) returns (Workout) {}
 }
 
@@ -23,9 +23,4 @@ message Workout {
   int32 authorId = 6;
 }
 
-message WorkoutDto {
-  string name = 1;
-  string description = 2;
-  int32 duration = 3;
-  string category = 4;
-}
+message Empty {}
