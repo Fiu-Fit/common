@@ -5,8 +5,8 @@ package workout;
 service WorkoutService {
   rpc Create (Workout) returns (Workout) {}
   rpc FindById (WorkoutId) returns (Workout) {}
-  rpc FindAll (Empty) returns (Workout[]) {}
-  rpc Put (WorkoutId, Workout) returns (Workout) {}
+  rpc FindAll (Empty) returns (WorkoutList) {}
+  rpc Put (WorkoutPutRequest) returns (Workout) {}
   rpc DeleteById (WorkoutId) returns (Workout) {}
 }
 
@@ -24,3 +24,12 @@ message Workout {
 }
 
 message Empty {}
+
+message WorkoutList {
+  repeated Workout workouts = 1;
+}
+
+message WorkoutPutRequest {
+  int32 id = 1;
+  Workout workout = 2;
+}
