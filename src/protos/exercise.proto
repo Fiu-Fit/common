@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package exercise;
+
+service ExerciseService {
+  rpc Create (Exercise) returns (Exercise) {}
+  rpc FindById (ExerciseId) returns (Exercise) {}
+  rpc FindAll (Empty) returns (ExerciseList) {}
+  rpc Put (Exercise) returns (Exercise) {}
+  rpc DeleteById (ExerciseId) returns (Exercise) {}
+}
+
+message ExerciseId {
+  int32 id = 1;
+}
+
+message Exercise {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  string category = 4;
+}
+
+message Empty {}
+
+message ExerciseList {
+  repeated Exercise exercises = 1;
+}
