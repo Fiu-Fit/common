@@ -5,7 +5,7 @@ package exercise;
 service ExerciseService {
   rpc Create (Exercise) returns (Exercise) {}
   rpc FindById (ExerciseId) returns (Exercise) {}
-  rpc FindAll (Empty) returns (Exercise[]) {}
+  rpc FindAll (Empty) returns (ExerciseList) {}
   rpc Put (Exercise) returns (Exercise) {}
   rpc DeleteById (ExerciseId) returns (Exercise) {}
 }
@@ -22,3 +22,7 @@ message Exercise {
 }
 
 message Empty {}
+
+message ExerciseList {
+  repeated Exercise exercises = 1;
+}
