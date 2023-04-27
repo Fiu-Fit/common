@@ -5,8 +5,8 @@ package workout;
 service WorkoutService {
   rpc Create (Workout) returns (Workout) {}
   rpc FindById (WorkoutId) returns (Workout) {}
-  rpc FindByName (WorkoutName) return (Workout) {}
-  rpc FindByCategory (WorkoutCategory) return (WorkoutList) {}
+  rpc FindByName (WorkoutName) returns (Workout) {}
+  rpc FindByCategory (WorkoutCategory) returns (WorkoutList) {}
   rpc FindAll (Empty) returns (WorkoutList) {}
   rpc Put (WorkoutPutRequest) returns (Workout) {}
   rpc DeleteById (WorkoutId) returns (Workout) {}

@@ -5,8 +5,8 @@ package exercise;
 service ExerciseService {
   rpc Create (Exercise) returns (Exercise) {}
   rpc FindById (ExerciseId) returns (Exercise) {}
-  rpc FindyByName (ExerciseName) return (Exercise) {}
-  rpc FindyByCategory (ExerciseCategory) return (ExerciseList) {}
+  rpc FindyByName (ExerciseName) returns (Exercise) {}
+  rpc FindyByCategory (ExerciseCategory) returns (ExerciseList) {}
   rpc FindAll (Empty) returns (ExerciseList) {}
   rpc Put (Exercise) returns (Exercise) {}
   rpc DeleteById (ExerciseId) returns (Exercise) {}
