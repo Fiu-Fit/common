@@ -5,23 +5,15 @@ package workout;
 service WorkoutService {
   rpc Create (Workout) returns (Workout) {}
   rpc FindById (WorkoutId) returns (Workout) {}
-  rpc FindByName (WorkoutName) returns (Workout) {}
   rpc FindByCategory (WorkoutCategory) returns (WorkoutList) {}
+  rpc FindByName (WorkoutName) returns (Workout) {}
   rpc FindAll (Empty) returns (WorkoutList) {}
   rpc Put (WorkoutPutRequest) returns (Workout) {}
   rpc DeleteById (WorkoutId) returns (Workout) {}
 }
 
 message WorkoutId {
-  int32 id = 1;
-}
-
-message WorkoutName {
-  string name = 1;
-}
-
-message WorkoutCategory {
-  string category = 1;
+  string id = 1;
 }
 
 message Workout {
@@ -30,8 +22,15 @@ message Workout {
   int32 duration = 3;
   int32 difficulty = 4;
   string category = 5;
-  repeated int32 athleteIds = 6;
-  int32 authorId = 7;
+  repeated ExerciseInfo exercises = 6;
+  repeated int32 athleteIds = 7;
+  int32 authorId = 8;
+}
+
+message ExerciseInfo {
+  string exerciseId = 1;
+  int32 repetitions = 2;
+  int32 duration = 3;
 }
 
 message Empty {}
@@ -41,6 +40,14 @@ message WorkoutList {
 }
 
 message WorkoutPutRequest {
-  int32 id = 1;
+  string id = 1;
   Workout workout = 2;
+}
+
+message WorkoutName {
+  string name = 1;
+}
+
+message WorkoutCategory {
+  string category = 1;
 }

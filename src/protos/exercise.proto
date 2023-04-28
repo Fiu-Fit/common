@@ -5,15 +5,32 @@ package exercise;
 service ExerciseService {
   rpc Create (Exercise) returns (Exercise) {}
   rpc FindById (ExerciseId) returns (Exercise) {}
-  rpc FindyByName (ExerciseName) returns (Exercise) {}
-  rpc FindyByCategory (ExerciseCategory) returns (ExerciseList) {}
+  rpc FindByName (ExerciseName) returns (Exercise) {}
+  rpc FindByCategory (ExerciseCategory) returns (ExerciseList) {}
   rpc FindAll (Empty) returns (ExerciseList) {}
-  rpc Put (Exercise) returns (Exercise) {}
+  rpc Put (ExercisePutRequest) returns (Exercise) {}
   rpc DeleteById (ExerciseId) returns (Exercise) {}
 }
 
 message ExerciseId {
-  int32 id = 1;
+  string id = 1;
+}
+
+message Exercise {
+  string name = 2;
+  string description = 3;
+  string category = 4;
+}
+
+message Empty {}
+
+message ExerciseList {
+  repeated Exercise exercises = 1;
+}
+
+message ExercisePutRequest {
+  string id = 1;
+  Exercise exercise = 2;
 }
 
 message ExerciseName {
@@ -22,16 +39,4 @@ message ExerciseName {
 
 message ExerciseCategory {
   string category = 1;
-}
-
-message Exercise {
-  string name = 1;
-  string description = 2;
-  string category = 3;
-}
-
-message Empty {}
-
-message ExerciseList {
-  repeated Exercise exercises = 1;
 }
