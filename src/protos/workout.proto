@@ -5,10 +5,11 @@ package workout;
 service WorkoutService {
   rpc Create (Workout) returns (Workout) {}
   rpc FindById (WorkoutId) returns (Workout) {}
-  rpc FindByCategory (WorkoutCategory) returns (WorkoutList) {}
+  rpc FindByCategory (WorkoutCategory) returns (Workouts) {}
   rpc FindByName (WorkoutName) returns (Workout) {}
-  rpc FindAll (Empty) returns (WorkoutList) {}
-  rpc Put (WorkoutPutRequest) returns (Workout) {}
+  rpc FindByExerciseId (ExerciseId) returns (Workouts) {}
+  rpc FindAll (Empty) returns (Workouts) {}
+  rpc Put (Workout) returns (Workout) {}
   rpc DeleteById (WorkoutId) returns (Workout) {}
 }
 
@@ -17,31 +18,36 @@ message WorkoutId {
 }
 
 message Workout {
-  string name = 1;
-  string description = 2;
-  int32 duration = 3;
-  int32 difficulty = 4;
-  string category = 5;
-  repeated ExerciseInfo exercises = 6;
-  repeated int32 athleteIds = 7;
-  int32 authorId = 8;
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  int32 duration = 4;
+  int32 difficulty = 5;
+  string category = 6;
+  repeated WorkoutExercise exercises = 7;
+  repeated int32 athleteIds = 8;
+  int32 authorId = 9;
 }
 
-message ExerciseInfo {
+message WorkoutExercise {
   string exerciseId = 1;
   int32 repetitions = 2;
-  int32 duration = 3;
+  Units units = 3;
+}
+
+enum Units {
+  SECONDS = 0;
+  MINUTES = 1;
+  HOURS = 2;
+  REPETITIONS = 3;
+  METERS = 4;
+  KILOMETERS = 5;
 }
 
 message Empty {}
 
-message WorkoutList {
+message Workouts {
   repeated Workout workouts = 1;
-}
-
-message WorkoutPutRequest {
-  string id = 1;
-  Workout workout = 2;
 }
 
 message WorkoutName {
@@ -50,4 +56,8 @@ message WorkoutName {
 
 message WorkoutCategory {
   string category = 1;
+}
+
+message ExerciseId {
+  string exerciseId = 1;
 }

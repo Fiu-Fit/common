@@ -6,9 +6,9 @@ service ExerciseService {
   rpc Create (Exercise) returns (Exercise) {}
   rpc FindById (ExerciseId) returns (Exercise) {}
   rpc FindByName (ExerciseName) returns (Exercise) {}
-  rpc FindByCategory (ExerciseCategory) returns (ExerciseList) {}
-  rpc FindAll (Empty) returns (ExerciseList) {}
-  rpc Put (ExercisePutRequest) returns (Exercise) {}
+  rpc FindByCategory (ExerciseCategory) returns (Exercises) {}
+  rpc FindAll (Empty) returns (Exercises) {}
+  rpc Put (Exercise) returns (Exercise) {}
   rpc DeleteById (ExerciseId) returns (Exercise) {}
 }
 
@@ -17,6 +17,7 @@ message ExerciseId {
 }
 
 message Exercise {
+  string id = 1;
   string name = 2;
   string description = 3;
   string category = 4;
@@ -24,13 +25,8 @@ message Exercise {
 
 message Empty {}
 
-message ExerciseList {
+message Exercises {
   repeated Exercise exercises = 1;
-}
-
-message ExercisePutRequest {
-  string id = 1;
-  Exercise exercise = 2;
 }
 
 message ExerciseName {
