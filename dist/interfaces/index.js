@@ -17,3 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./interfaces"), exports);
 __exportStar(require("./category"), exports);
 __exportStar(require("./unit"), exports);
+__exportStar(require("./exercise"), exports);
+__exportStar(require("./workout"), exports);
+__exportStar(require("./workoutExercise"), exports);
+__exportStar(require("./user"), exports);
