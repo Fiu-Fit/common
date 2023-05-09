@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.categoryToString = exports.Category = void 0;
+exports.CategoryEnumToName = exports.Category = void 0;
 var Category;
 (function (Category) {
     Category[Category["LEGS"] = 0] = "LEGS";
@@ -16,21 +16,17 @@ var Category;
     Category[Category["STRENGTH"] = 10] = "STRENGTH";
     Category[Category["UNRECOGNIZED"] = -1] = "UNRECOGNIZED";
 })(Category = exports.Category || (exports.Category = {}));
-const categoryToString = (category) => {
-    const translation = {
-        [Category.LEGS]: 'Piernas',
-        [Category.CHEST]: 'Pecho',
-        [Category.BACK]: 'Espalda',
-        [Category.SHOULDERS]: 'Hombros',
-        [Category.ARMS]: 'Brazos',
-        [Category.CORE]: 'Nucleo',
-        [Category.CARDIO]: 'Cardio',
-        [Category.FULLBODY]: 'Cuerpo completo',
-        [Category.FREEWEIGHT]: 'Peso libre',
-        [Category.STRETCHING]: 'Estiramiento',
-        [Category.STRENGTH]: 'Fuerza',
-        [Category.UNRECOGNIZED]: 'Desconocido',
-    };
-    return translation[category];
+exports.CategoryEnumToName = {
+    [Category.LEGS]: "Piernas",
+    [Category.CHEST]: "Pecho",
+    [Category.BACK]: "Espalda",
+    [Category.SHOULDERS]: "Hombros",
+    [Category.ARMS]: "Brazos",
+    [Category.CORE]: "Nucleo",
+    [Category.CARDIO]: "Cardio",
+    [Category.FULLBODY]: "Cuerpo completo",
+    [Category.FREEWEIGHT]: "Peso libre",
+    [Category.STRETCHING]: "Estiramiento",
+    [Category.STRENGTH]: "Fuerza",
+    [Category.UNRECOGNIZED]: "Desconocido",
 };
-exports.categoryToString = categoryToString;
