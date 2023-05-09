@@ -5,9 +5,13 @@ export enum Unit {
   UNRECOGNIZED = -1,
 }
 
-export const UnitEnumToName = {
-  [Unit.SECONDS]: "Segundos",
-  [Unit.REPETITIONS]: "Repeticiones",
-  [Unit.METERS]: "Metros",
-  [Unit.UNRECOGNIZED]: "Desconocido",
+export const unitToString = (unit: Unit): string => {
+  const translation = {
+    [Unit.SECONDS]:      'Segundos',
+    [Unit.REPETITIONS]:  'Repeticiones',
+    [Unit.METERS]:       'Metros',
+    [Unit.UNRECOGNIZED]: 'Desconocido',
+  };
+
+  return translation[unit];
 };

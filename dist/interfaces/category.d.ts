@@ -12,17 +12,4 @@ export declare enum Category {
     STRENGTH = 10,
     UNRECOGNIZED = -1
 }
-export declare const CategoryEnumToName: {
-    0: string;
-    1: string;
-    2: string;
-    3: string;
-    4: string;
-    5: string;
-    6: string;
-    7: string;
-    8: string;
-    9: string;
-    10: string;
-    [-1]: string;
-};
+export declare const categoryToString: (category: Category) => string;

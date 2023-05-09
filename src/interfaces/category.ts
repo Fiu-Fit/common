@@ -13,17 +13,21 @@ export enum Category {
   UNRECOGNIZED = -1,
 }
 
-export const CategoryEnumToName = {
-  [Category.LEGS]: "Piernas",
-  [Category.CHEST]: "Pecho",
-  [Category.BACK]: "Espalda",
-  [Category.SHOULDERS]: "Hombros",
-  [Category.ARMS]: "Brazos",
-  [Category.CORE]: "Nucleo",
-  [Category.CARDIO]: "Cardio",
-  [Category.FULLBODY]: "Cuerpo completo",
-  [Category.FREEWEIGHT]: "Peso libre",
-  [Category.STRETCHING]: "Estiramiento",
-  [Category.STRENGTH]: "Fuerza",
-  [Category.UNRECOGNIZED]: "Desconocido",
+export const categoryToString = (category: Category): string => {
+  const translation = {
+    [Category.LEGS]:         'Piernas',
+    [Category.CHEST]:        'Pecho',
+    [Category.BACK]:         'Espalda',
+    [Category.SHOULDERS]:    'Hombros',
+    [Category.ARMS]:         'Brazos',
+    [Category.CORE]:         'Nucleo',
+    [Category.CARDIO]:       'Cardio',
+    [Category.FULLBODY]:     'Cuerpo completo',
+    [Category.FREEWEIGHT]:   'Peso libre',
+    [Category.STRETCHING]:   'Estiramiento',
+    [Category.STRENGTH]:     'Fuerza',
+    [Category.UNRECOGNIZED]: 'Desconocido',
+  };
+
+  return translation[category];
 };
