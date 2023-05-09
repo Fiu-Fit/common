@@ -4,4 +4,9 @@ export declare enum Unit {
     METERS = 2,
     UNRECOGNIZED = -1
 }
-export declare const unitToString: (unit: Unit) => string;
+export declare const UnitEnumToName: {
+    0: string;
+    1: string;
+    2: string;
+    [-1]: string;
+};
