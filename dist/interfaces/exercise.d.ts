@@ -4,4 +4,5 @@ export interface Exercise {
     name: string;
     description: string;
     category: Category;
+    METValue: number;
 }
