@@ -11,3 +11,12 @@ export const RoleNameToEnum: Record<string, number> = {
     Athlete: 1,
     Trainer: 2,
 };
+
+export const ServiceName = {
+    Workout:   'workout',
+    User:      'user',
+    Progress:  'progress',
+    Goals:     'goals',
+    Ratings:   'ratings',
+    Followers: 'followers'
+};
