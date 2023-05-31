@@ -6,4 +6,5 @@ export interface WorkoutExercise {
   reps: number;
   weight?: number;
   unit: Unit; // for reps
+  repDuration: number;
 }

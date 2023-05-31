@@ -1,16 +1,16 @@
 export enum Unit {
-  SECONDS = 0,
-  REPETITIONS = 1,
-  METERS = 2,
-  UNRECOGNIZED = -1,
+  KILOGRAMS,
+  METERS,
+  SECONDS,
+  REPETITIONS,
 }
 
 export const unitToString = (unit: Unit): string => {
   const translation = {
+    [Unit.KILOGRAMS]:    'Kilogramos',
+    [Unit.METERS]:       'Metros',
     [Unit.SECONDS]:      'Segundos',
     [Unit.REPETITIONS]:  'Repeticiones',
-    [Unit.METERS]:       'Metros',
-    [Unit.UNRECOGNIZED]: 'Desconocido',
   };
 
   return translation[unit];
