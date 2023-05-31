@@ -1,7 +1,7 @@
 export declare enum Unit {
-    SECONDS = 0,
-    REPETITIONS = 1,
-    METERS = 2,
-    UNRECOGNIZED = -1
+    KILOGRAMS = 0,
+    METERS = 1,
+    SECONDS = 2,
+    REPETITIONS = 3
 }
 export declare const unitToString: (unit: Unit) => string;

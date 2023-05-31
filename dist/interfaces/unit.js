@@ -3,17 +3,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.unitToString = exports.Unit = void 0;
 var Unit;
 (function (Unit) {
-    Unit[Unit["SECONDS"] = 0] = "SECONDS";
-    Unit[Unit["REPETITIONS"] = 1] = "REPETITIONS";
-    Unit[Unit["METERS"] = 2] = "METERS";
-    Unit[Unit["UNRECOGNIZED"] = -1] = "UNRECOGNIZED";
+    Unit[Unit["KILOGRAMS"] = 0] = "KILOGRAMS";
+    Unit[Unit["METERS"] = 1] = "METERS";
+    Unit[Unit["SECONDS"] = 2] = "SECONDS";
+    Unit[Unit["REPETITIONS"] = 3] = "REPETITIONS";
 })(Unit = exports.Unit || (exports.Unit = {}));
 const unitToString = (unit) => {
     const translation = {
+        [Unit.KILOGRAMS]: 'Kilogramos',
+        [Unit.METERS]: 'Metros',
         [Unit.SECONDS]: 'Segundos',
         [Unit.REPETITIONS]: 'Repeticiones',
-        [Unit.METERS]: 'Metros',
-        [Unit.UNRECOGNIZED]: 'Desconocido',
     };
     return translation[unit];
 };
