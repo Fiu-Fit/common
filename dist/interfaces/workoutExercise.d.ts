@@ -6,4 +6,10 @@ export interface WorkoutExercise {
     weight?: number;
     unit: Unit;
     repDuration: number;
+    exercise?: {
+        _id: string;
+        name: string;
+        description: string;
+        duration: number;
+    };
 }

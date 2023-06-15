@@ -21,3 +21,4 @@ __exportStar(require("./exercise"), exports);
 __exportStar(require("./workout"), exports);
 __exportStar(require("./workoutExercise"), exports);
 __exportStar(require("./user"), exports);
+__exportStar(require("./rating"), exports);

@@ -7,4 +7,10 @@ export interface WorkoutExercise {
   weight?: number;
   unit: Unit; // for reps
   repDuration: number;
+  exercise?: {
+    _id: string;
+    name: string;
+    description: string;
+    duration: number;
+  }
 }
