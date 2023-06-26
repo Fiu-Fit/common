@@ -12,5 +12,5 @@ export interface Workout {
     authorId: number;
     averageRating?: number;
     updatedAt?: string;
-    isBlocked?: boolean;
+    isBlocked: boolean;
 }
