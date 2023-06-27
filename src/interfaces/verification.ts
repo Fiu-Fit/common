@@ -3,7 +3,7 @@ import { RequestStatus } from '.';
 export interface Verification {
   id: number;
   userId: number;
-  status: RequestStatus;
+  status: keyof typeof RequestStatus;
   resourceId: string;
   receivedAt: Date;
 };

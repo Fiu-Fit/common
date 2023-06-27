@@ -1,5 +1,5 @@
-export declare enum RequestStatus {
-    PENDING = 0,
-    DECLINED = 1,
-    APPROVED = 2
-}
+export declare const RequestStatus: {
+    Pending: string;
+    Approved: string;
+    Rejected: string;
+};
