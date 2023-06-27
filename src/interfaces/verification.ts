@@ -1,8 +1,4 @@
-export enum RequestStatus {
-  Pending = "Pending",
-  Declined = "Declined",
-  Approved = "Approved",
-}
+import { RequestStatus } from '.';
 
 export interface Verification {
   id: number;
