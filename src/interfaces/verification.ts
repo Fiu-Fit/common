@@ -1,4 +1,4 @@
-export const enum RequestStatus {
+export enum RequestStatus {
   Pending = "Pending",
   Declined = "Declined",
   Approved = "Approved",
