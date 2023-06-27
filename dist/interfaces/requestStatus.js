@@ -4,5 +4,5 @@ exports.RequestStatus = void 0;
 exports.RequestStatus = {
     Pending: 'Pending',
     Approved: 'Approved',
-    Rejected: 'Rejected',
+    Declined: 'Declined',
 };
