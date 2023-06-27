@@ -7,4 +7,3 @@ export * from './workoutExercise';
 export * from './user';
 export * from './rating';
 export * from './verification';
-export * from './requestStatus';
