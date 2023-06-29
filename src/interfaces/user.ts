@@ -10,4 +10,5 @@ export interface User {
   favoriteWorkouts: string[];
   deviceToken: string;
   phoneNumber?: string;
+  profilePicture?: string;
 }
