@@ -13,4 +13,5 @@ export interface Workout {
     averageRating?: number;
     updatedAt?: string;
     isBlocked: boolean;
+    multimedia: string[];
 }
