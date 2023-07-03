@@ -6,6 +6,7 @@ export interface User {
   role: string | number;
   bodyWeight: number;
   blocked: boolean;
+  blockedDate?: Date;
   federatedIdentity: boolean;
   favoriteWorkouts: string[];
   deviceToken: string;
